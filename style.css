@@ -1,0 +1,91 @@
+body,html
+{
+    margin:0;
+    font-family: monospace;
+    background-color: #000;
+    color: #0a3;
+    font-size: 1.1em;
+}
+
+#pointer::before
+{
+    content: "Pointer: ";
+}
+#pointer
+{
+    margin: 3em;
+}
+
+#storage
+{
+    margin: 1em 4em;
+    
+    border-collapse: collapse;
+    text-align: right;
+}
+
+#storage td, #storage tr
+{
+    margin: 0;
+    padding: 3px;
+}
+
+#storage tr td:last-child input
+{
+    width: 3.36em;
+    padding: .4em;
+    
+    background: #555;
+    color: beige;
+    border-radius: .3em;
+    
+    font-size: .84em;
+    text-align: right;
+    
+    outline: none;
+    border : 1.4px solid transparent;
+    transition: border 312ms;
+}
+#storage tr td:last-child input:focus
+{
+    outline: none;
+    border-color: #64DD17;
+    transition: border 312ms;
+}
+
+
+#input
+{
+    float: left;
+    height: 60vh;
+    width: calc( 95vw - 32em);
+    margin: 1em 4em;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    background-color: #555;
+    border : 1.4px solid transparent;
+    color: beige;
+}
+#input:focus
+{
+    outline: none;
+    border-color: #64DD17;
+    transition: border 312ms;
+}
+
+/*MOBILE*/
+@media (max-width:560px)
+{
+    #input
+    {
+        float : none!important;
+        width : 100%!important;
+        margin:   0 !important;
+    }
+    
+    #storage
+    {
+        margin: auto!important;
+    }
+}
